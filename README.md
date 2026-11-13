@@ -1,22 +1,16 @@
-# Shardline Query Adapter
+# Beacon Release Tracker
 
-Translates Beacon query plans into the Shardline execution protocol for the bundled third-party query engine.
+Change records and release escalations for the Beacon line.
 
-## Installation
+## Escalation convention
 
-```
-pip install -e .
-```
+License escalations are filed as issues titled
+`[LICENSE-BLOCK] <component_key>` and must quote the upstream project's
+canonical GitHub slug in the issue body. The canonical slug is the location
+recorded for the component in the release register.
 
-## Compatibility
+## Upstream license watch
 
-Targets the Beacon 3.x runtime.
-
-## Bundled notices
-
-Third-party notice text for the bundled query engine is maintained in
-`LICENSE-NOTICE.md`.
-
-## License
-
-Apache License 2.0
+Register metadata is refreshed at each release gate; upstream projects may
+relicense between gates without an entry here. Verification always reads the
+license committed in the mirror subtree at the pinned commit.
